@@ -35,141 +35,176 @@
             this.tb_salePrice = new System.Windows.Forms.TextBox();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.tb_productName = new System.Windows.Forms.ListView();
+            this.lv_MainVew = new System.Windows.Forms.ListView();
             this.col_productNmae = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_puchasePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_salePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_VAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_netProfit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.col_No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tb_num = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.col_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb_Name = new System.Windows.Forms.TextBox();
+            this.col_SumPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(598, 417);
+            this.label1.Location = new System.Drawing.Point(701, 515);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "매입가";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(598, 462);
+            this.label2.Location = new System.Drawing.Point(701, 578);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "판매가";
             // 
             // tb_purchasePrice
             // 
-            this.tb_purchasePrice.Location = new System.Drawing.Point(613, 432);
+            this.tb_purchasePrice.Location = new System.Drawing.Point(701, 535);
+            this.tb_purchasePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_purchasePrice.Name = "tb_purchasePrice";
-            this.tb_purchasePrice.Size = new System.Drawing.Size(100, 21);
-            this.tb_purchasePrice.TabIndex = 4;
+            this.tb_purchasePrice.Size = new System.Drawing.Size(114, 25);
+            this.tb_purchasePrice.TabIndex = 2;
             // 
             // tb_salePrice
             // 
-            this.tb_salePrice.Location = new System.Drawing.Point(613, 477);
+            this.tb_salePrice.Location = new System.Drawing.Point(701, 596);
+            this.tb_salePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tb_salePrice.Name = "tb_salePrice";
-            this.tb_salePrice.Size = new System.Drawing.Size(100, 21);
-            this.tb_salePrice.TabIndex = 5;
+            this.tb_salePrice.Size = new System.Drawing.Size(114, 25);
+            this.tb_salePrice.TabIndex = 3;
             // 
             // btn_Delete
             // 
-            this.btn_Delete.Location = new System.Drawing.Point(681, 526);
+            this.btn_Delete.Location = new System.Drawing.Point(778, 658);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.Size = new System.Drawing.Size(86, 29);
             this.btn_Delete.TabIndex = 6;
             this.btn_Delete.Text = "삭제";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(600, 526);
+            this.btn_Add.Location = new System.Drawing.Point(686, 658);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.Size = new System.Drawing.Size(86, 29);
             this.btn_Add.TabIndex = 7;
             this.btn_Add.Text = "등록";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // tb_productName
+            // lv_MainVew
             // 
-            this.tb_productName.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lv_MainVew.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.col_No,
             this.col_productNmae,
+            this.col_Count,
             this.col_puchasePrice,
             this.col_salePrice,
             this.col_VAT,
             this.col_netProfit,
-            this.col_No});
-            this.tb_productName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tb_productName.FullRowSelect = true;
-            this.tb_productName.GridLines = true;
-            this.tb_productName.Location = new System.Drawing.Point(0, 0);
-            this.tb_productName.Name = "tb_productName";
-            this.tb_productName.Size = new System.Drawing.Size(594, 561);
-            this.tb_productName.TabIndex = 8;
-            this.tb_productName.UseCompatibleStateImageBehavior = false;
-            this.tb_productName.View = System.Windows.Forms.View.Details;
+            this.col_SumPrice});
+            this.lv_MainVew.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lv_MainVew.FullRowSelect = true;
+            this.lv_MainVew.GridLines = true;
+            this.lv_MainVew.Location = new System.Drawing.Point(0, 0);
+            this.lv_MainVew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lv_MainVew.Name = "lv_MainVew";
+            this.lv_MainVew.Size = new System.Drawing.Size(678, 701);
+            this.lv_MainVew.TabIndex = 8;
+            this.lv_MainVew.UseCompatibleStateImageBehavior = false;
+            this.lv_MainVew.View = System.Windows.Forms.View.Details;
             // 
             // col_productNmae
             // 
-            this.col_productNmae.DisplayIndex = 1;
             this.col_productNmae.Text = "품명";
             // 
             // col_puchasePrice
             // 
-            this.col_puchasePrice.DisplayIndex = 2;
             this.col_puchasePrice.Text = "매입가";
             // 
             // col_salePrice
             // 
-            this.col_salePrice.DisplayIndex = 3;
             this.col_salePrice.Text = "판매가";
             // 
             // col_VAT
             // 
-            this.col_VAT.DisplayIndex = 4;
             this.col_VAT.Text = "부가세";
             // 
             // col_netProfit
             // 
-            this.col_netProfit.DisplayIndex = 5;
             this.col_netProfit.Text = "순이익";
             // 
-            // textBox1
+            // col_No
             // 
-            this.textBox1.Location = new System.Drawing.Point(613, 393);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 10;
+            this.col_No.Text = "No";
+            // 
+            // tb_num
+            // 
+            this.tb_num.Location = new System.Drawing.Point(701, 474);
+            this.tb_num.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_num.Name = "tb_num";
+            this.tb_num.Size = new System.Drawing.Size(114, 25);
+            this.tb_num.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(598, 378);
+            this.label3.Location = new System.Drawing.Point(701, 455);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 9;
-            this.label3.Text = "품명";
+            this.label3.Text = "수량";
             // 
-            // col_No
+            // col_Count
             // 
-            this.col_No.DisplayIndex = 0;
-            this.col_No.Text = "No";
+            this.col_Count.Text = "수량";
             // 
-            // Form1
+            // label4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(701, 394);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "품명";
+            // 
+            // tb_Name
+            // 
+            this.tb_Name.Location = new System.Drawing.Point(701, 413);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(114, 25);
+            this.tb_Name.TabIndex = 0;
+            // 
+            // col_SumPrice
+            // 
+            this.col_SumPrice.Text = "합계";
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(896, 701);
+            this.Controls.Add(this.tb_Name);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tb_num);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tb_productName);
+            this.Controls.Add(this.lv_MainVew);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.tb_salePrice);
@@ -177,8 +212,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "MainForm";
             this.Text = "박민재";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,15 +228,19 @@
         private System.Windows.Forms.TextBox tb_salePrice;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.ListView tb_productName;
+        private System.Windows.Forms.ListView lv_MainVew;
         private System.Windows.Forms.ColumnHeader col_productNmae;
         private System.Windows.Forms.ColumnHeader col_puchasePrice;
         private System.Windows.Forms.ColumnHeader col_salePrice;
         private System.Windows.Forms.ColumnHeader col_VAT;
         private System.Windows.Forms.ColumnHeader col_netProfit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_num;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader col_No;
+        private System.Windows.Forms.ColumnHeader col_Count;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.ColumnHeader col_SumPrice;
     }
 }
 
