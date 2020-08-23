@@ -60,6 +60,11 @@ namespace Restaurant
                 MessageBox.Show("판매가에 숫자 값만 입력해 주세요.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if(puchaseprice > saleprice)
+            {
+                MessageBox.Show("판매가격이 매입가보다 낮을 수 없습니다.", "경고", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             viewCon.AddProduct(tb_Name.Text.ToString(), num, puchaseprice, saleprice);
             UpdateListView();
         }

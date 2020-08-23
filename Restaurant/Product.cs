@@ -48,6 +48,11 @@ namespace Restaurant
         /// </summary>
         private int sumPrice;
 
+        /// <summary>
+        /// 순이익 합계
+        /// </summary>
+        private int sumnetProfit;     
+
         //public int No
         //{
         //    get
@@ -149,6 +154,19 @@ namespace Restaurant
             set
             {
                 sumPrice = value;
+            }
+        }
+
+        public int SumnetProfit
+        {
+            get
+            {
+                return sumnetProfit;
+            }
+
+            set
+            {
+                sumnetProfit = value;
             }
         }
 

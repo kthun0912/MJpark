@@ -36,18 +36,19 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.lv_MainVew = new System.Windows.Forms.ListView();
+            this.col_No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_productNmae = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.col_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_puchasePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_salePrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_VAT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.col_netProfit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.col_No = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.col_SumPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tb_num = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.col_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.tb_Name = new System.Windows.Forms.TextBox();
-            this.col_SumPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.col_SumnetProfit = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +117,8 @@
             this.col_salePrice,
             this.col_VAT,
             this.col_netProfit,
-            this.col_SumPrice});
+            this.col_SumPrice,
+            this.col_SumnetProfit});
             this.lv_MainVew.Dock = System.Windows.Forms.DockStyle.Left;
             this.lv_MainVew.FullRowSelect = true;
             this.lv_MainVew.GridLines = true;
@@ -128,9 +130,17 @@
             this.lv_MainVew.UseCompatibleStateImageBehavior = false;
             this.lv_MainVew.View = System.Windows.Forms.View.Details;
             // 
+            // col_No
+            // 
+            this.col_No.Text = "No";
+            // 
             // col_productNmae
             // 
             this.col_productNmae.Text = "품명";
+            // 
+            // col_Count
+            // 
+            this.col_Count.Text = "수량";
             // 
             // col_puchasePrice
             // 
@@ -148,9 +158,9 @@
             // 
             this.col_netProfit.Text = "순이익";
             // 
-            // col_No
+            // col_SumPrice
             // 
-            this.col_No.Text = "No";
+            this.col_SumPrice.Text = "합계";
             // 
             // tb_num
             // 
@@ -169,10 +179,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "수량";
             // 
-            // col_Count
-            // 
-            this.col_Count.Text = "수량";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -190,9 +196,10 @@
             this.tb_Name.Size = new System.Drawing.Size(114, 25);
             this.tb_Name.TabIndex = 0;
             // 
-            // col_SumPrice
+            // col_SumnetProfit
             // 
-            this.col_SumPrice.Text = "합계";
+            this.col_SumnetProfit.Text = "순이익합계";
+            this.col_SumnetProfit.Width = 100;
             // 
             // MainForm
             // 
@@ -241,6 +248,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.ColumnHeader col_SumPrice;
+        private System.Windows.Forms.ColumnHeader col_SumnetProfit;
     }
 }
 

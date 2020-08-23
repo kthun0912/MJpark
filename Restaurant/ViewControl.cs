@@ -21,7 +21,7 @@ namespace Restaurant
             List<string[]> MainViewString = new List<string[]>();
             foreach (KeyValuePair<int, Product> item in pmjModel.getProductDicList())
             {
-                string[] ProductString = new string[8];
+                string[] ProductString = new string[9];
                 ProductString[0] = item.Key.ToString();
                 ProductString[1] = item.Value.ProductName;
                 ProductString[2] = item.Value.Count.ToString();
@@ -30,6 +30,7 @@ namespace Restaurant
                 ProductString[5] = item.Value.VAT.ToString();
                 ProductString[6] = item.Value.NetProfit.ToString();
                 ProductString[7] = item.Value.SumPrice.ToString();
+                ProductString[8] = item.Value.SumnetProfit.ToString();
                 MainViewString.Add(ProductString);
             }
             return MainViewString;

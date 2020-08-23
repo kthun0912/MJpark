@@ -95,8 +95,9 @@ namespace Restaurant
             else
             {
                 int vatSale = (int)VATcalculation(saleprice);
-                int netprofit = saleprice - vatSale;
-                int sumprice = netprofit * count;
+                int netprofit = saleprice - vatSale - puchaseprice;
+                int sumprice = saleprice * count;
+                int sumnetprofit = netprofit * count;
                 Product pd = new Product();
                 pd.ProductName = name;
                 pd.Count = count;
@@ -105,6 +106,7 @@ namespace Restaurant
                 pd.VAT = vatSale;
                 pd.NetProfit = netprofit;
                 pd.SumPrice = sumprice;
+                pd.SumnetProfit = sumnetprofit;
                 ProductDicList.Add(index, pd);
                 result = true;
             }
